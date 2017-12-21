@@ -1,5 +1,5 @@
 /*
-Human Readable Duration Format
+Human Readable Duration Format 
 https://www.codewars.com/kata/52742f58faf5485cae000b9a
 
 In this problem, we create a function that takes in a non-negative integer of seconds and return a string representing the number of seconds in a human readable format. The string takes into account, if applicable, the number of years, days, hours, minutes, and seconds, separated by a comma and a space. The last component is separated by an "and."
