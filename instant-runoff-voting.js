@@ -19,20 +19,18 @@ I think my solution is a little lengthy and it may be worth looking into refacto
 */
 
 const runoff = arr => {
-  let redo = false, half = arr.length / 2;
-  do {
+  while(1) {
     let obj = {};
     arr[0].forEach(el => obj[el] = 0);
     arr.forEach(el => obj[el[0]]++);
     let maxVotes = Math.max.apply(null, Object.values(obj)), count = 0;
     for (let i in obj)
       if (obj[i] === maxVotes) count++;
-    if (maxVotes > half && count === 1) {
+    if (maxVotes > arr.length / 2 && count === 1) {
       for (let i in obj)
         if (obj[i] === maxVotes) return i;
     }
     else {
-      redo = true;
       let minVotes = Math.min.apply(null, Object.values(obj));
       for (let i in obj) {
         if (obj[i] === minVotes)
@@ -40,5 +38,5 @@ const runoff = arr => {
       }
     }
     if (!arr[0][0]) return 'undefined';
-  } while (redo = true);
+  }
 }
