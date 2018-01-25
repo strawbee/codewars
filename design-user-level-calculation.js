@@ -3,7 +3,7 @@ Design a User Level Calculation Function
 https://www.codewars.com/kata/fake-website-number-5-design-an-accurate-user-level-calculation-function/javascript
 
 The long list of requirements are listed at the link above! I am creating a user level calculation function similar to the system used at Codewars.
-*/
+*/ 
 
 'use strict';
 
