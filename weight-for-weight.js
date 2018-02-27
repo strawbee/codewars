@@ -3,7 +3,7 @@ Weight for Weight
 https://www.codewars.com/kata/55c6126177c9441a570000cc
 
 Given a string of numbers, return a string of the numbers organized by the sum of its digits, from smallest to largest. If the sum of the digits is equal to another number, class the numbers themselves as if they were strings and not digits ("smaller" strings come first).
-*/
+*/ 
 
 const orderWeight = str => {
     let obj = {}, result = '';
