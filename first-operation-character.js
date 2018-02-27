@@ -10,24 +10,16 @@ Example: firstOperationCharacter("((2 + 2) * 2) * 3 + (2 + (2 * 2))"); // return
 
 const firstOperationCharacter = str => {
     let n = 0, max = 0, res = [];
-    if (str.indexOf('(') === -1) return str.indexOf('*') > -1 ? str.indexOf('*') : str.indexOf('+');
     for (let i in str) {
-        if (str[i] === '(') {
-            n++;
-            if (n > max) max = n;
-        }
-        else if (str[i] === ')') n--;
+        str[i] === '(' ? n++ : str[i] === ')' ? n-- : null;
+        if (n > max) max = n;
     }
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === '(') {
-            n++;
-            if (n === max) {
-                let slice = str.slice(i, str.indexOf(')', i));
-                if (slice.indexOf('*') > -1) return slice.indexOf('*') + i;
-                else if (slice.indexOf('+') > -1) res.push(slice.indexOf('+') + i);
-            }
+        str[i] === '(' ? n++ : str[i] === ')' ? n-- : null;
+        if (n === max) {
+            if (str[i] === '*') return i;
+            else if (str[i] === '+') res.push(i);
         }
-        else if (str[i] === ')') n--;
     }
     return res[0];
 };
