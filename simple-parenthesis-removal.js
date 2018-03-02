@@ -13,17 +13,17 @@ const solve = str => {
     let current = str[i];
     if (current === '(') {
       if (str[i - 1] === '-') {
-        obj[i] = [];
+        obj[i] = 0;
         level++;
       }
-      for (let j in obj) obj[j].push('(');
+      for (let j in obj) obj[j]++;
       prev = current;
       continue;
     }
     if (current === ')') {
       for (let j in obj) {
-        obj[j].pop();
-        if (!obj[j].length) {
+        obj[j]--;
+        if (!obj[j]) {
           level--;
           delete obj[j];
         }
