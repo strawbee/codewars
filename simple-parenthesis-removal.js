@@ -8,7 +8,7 @@ Example: solve("u-(v-w-(x+y))-z"); // returns "u-v+w+x+y-z"
 */
 
 const solve = str => {
-  let level = 0; obj = {}, res = '', prev = '';
+  let level = 0; obj = {}, prev = '', res = '';
   for (let i = 0; i < str.length; i++) {
     let current = str[i];
     if (current === '(') {
@@ -22,21 +22,17 @@ const solve = str => {
     }
     if (current === ')') {
       for (let j in obj) {
-        if (obj[j].length) {
-          obj[j].pop();
-          if (!obj[j].length) {
-            level--;
-            delete obj[j];
-          }
+        obj[j].pop();
+        if (!obj[j].length) {
+          level--;
+          delete obj[j];
         }
       }
       prev = current;
       continue;
     }
     if (level % 2) {
-      if (current === '+') {
-          current = '-';
-      }
+      if (current === '+') current = '-';
       else if (current === '-') current = '+';
     }
     if (current === '+') {
