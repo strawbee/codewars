@@ -1,5 +1,5 @@
 /*
-Sum of Prime-Indexed Elements
+Sum of Prime-Indexed Elements 
 https://www.codewars.com/kata/59f38b033640ce9fc700015b
 
 Given an array of integers, return the sum of the prime indexed elements.
