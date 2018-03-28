@@ -1,4 +1,4 @@
-/*
+/* 
 Text Align Justify
 https://www.codewars.com/kata/text-align-justify
 

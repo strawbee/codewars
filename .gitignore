@@ -1,5 +1,5 @@
 coverage
 node_modules
 
-middle-permutation
-huffman-encoding
+middle-permutation.js
+huffman-encoding.js
