@@ -1,0 +1,23 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "Code Wars solutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strawbee/codewars.git"
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strawbee/codewars/issues"
+  },
+  "homepage": "https://github.com/strawbee/codewars#readme",
+  "devDependencies": {
+    "eslint": "^4.18.2"
+  }
+}
