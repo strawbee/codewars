@@ -35,7 +35,6 @@ const frequencies = str => {
 };
 
 const encode = (arr, str) => {
-  if (arr.length > 1 && !str) return str;
   if (arr.length < 2) return null;
   let tree = _buildTree(arr), obj = _buildCipher(tree), res = '';
   for (let i of str) res += obj[i];
@@ -43,7 +42,6 @@ const encode = (arr, str) => {
 };
 
 const decode = (arr, str) => {
-  if (arr.length > 1 && !str) return str;
   if (arr.length < 2) return null;
   let tree = _buildTree(arr), obj = _buildCipherBackwards(tree), current = '', res = '';
   for (let i of str) {
